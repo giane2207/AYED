@@ -20,11 +20,11 @@ public class Ejercicio1 {
     //Utilizo un metodo recursivo para no usar estructuras de control iterativas
     public static void imprimirSinIterador(int numA, int numB){
         //Cuando numA supera a numB se termina la recursion
-        if (numA > numB){
-            return;
-        }
-        //Imprimo numero actual
+        if (numA > numB) {return;}
+
+        //Imprimo el numero actual
         System.out.println("Numero: " + numA);
+
         //Llamo recursivamente incrementando mi numero actual
         imprimirSinIterador(numA + 1, numB);
     }

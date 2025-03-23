@@ -1,6 +1,6 @@
-package Practica1;
+package Practica1.Ejercicio3;
 
-public class Persona {
+public abstract class Persona {
     private String nombre, apellido, email;
 
     public Persona() {}

@@ -1,4 +1,4 @@
-package Practica1;
+package Practica1.Ejercicio3;
 
 public class Profesor extends Persona {
     private String catedra, facultad;
