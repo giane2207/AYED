@@ -1,4 +1,4 @@
-package Practica1;
+package Practica1.Ejercicio4;
 
 public class Ejercicio4 {
         public static void swap1 (int x, int y) {
