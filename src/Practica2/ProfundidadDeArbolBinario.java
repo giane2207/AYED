@@ -9,6 +9,7 @@ public class ProfundidadDeArbolBinario {
         this.a = a;
     }
 
+    /*
     public int sumaElementosProfundidad(int p) {
         if (a == null) return 0;
 
@@ -44,7 +45,7 @@ public class ProfundidadDeArbolBinario {
 
         }
         return sum;
-    }
+    }*/
 
     //Alternativa sin usar null como marca de fin de nivel
     public int sumaElementosProfundidad(int p) {
