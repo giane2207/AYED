@@ -13,7 +13,7 @@ public class ParcialArboles {
         int cantHijosIzq;
         int cantHijosDer;
 
-        //Si se encontro el nodo de raiz "num"
+        //Si no se encontro el nodo de raiz "num"
         if (nodo == null)
             return false;
 
@@ -107,7 +107,7 @@ public class ParcialArboles {
         BinaryTree<Integer> n18 = new BinaryTree<>(18);
         n4.addLeftChild(n18);
 
-       
+
         ParcialArboles pa = new ParcialArboles(root);
 
         System.out.println("isLeftTree(7): " + pa.isLeftTree(7));   // true
