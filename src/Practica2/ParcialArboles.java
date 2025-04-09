@@ -7,6 +7,7 @@ public class ParcialArboles {
         this.a = a;
     }
 
+    //Ejercicio 7
     public boolean isLeftTree(int num){
         BinaryTree<Integer> nodo = buscarNodo(num, a);
 
@@ -76,6 +77,41 @@ public class ParcialArboles {
 
         return suma;
     }
+
+    //Ejercicio 8
+    public boolean esPrefijo (BinaryTree<Integer> a1, BinaryTree<Integer> a2){
+        //Si el arbol 1 esta vacio es prefijo
+        if (a1.isEmpty())
+            return true;
+
+        //Si el arbol1 no esta vacio y el arbol2 si, no es prefijo
+        if (a2.isEmpty())
+            return false;
+
+        //Si un nodo no coincide en valor, no es prefijo
+        if (!a1.getData().equals(a2.getData()))
+            return false;
+
+        boolean prefijoIzquierdo = true;
+        boolean prefijoDerecho = true;
+
+        // Verifico y comparo los hijos izquierdos si arbol1 los tiene
+        if (a1.hasLeftChild()) {
+            if (!a2.hasLeftChild())
+                return false;
+            prefijoIzquierdo = esPrefijo(a1.getLeftChild(), a2.getLeftChild());
+        }
+
+        // Verifico y comparo los hijos derechos si arbol1 los tiene
+        if (a1.hasRightChild()) {
+            if (!a2.hasRightChild())
+                return false;
+            prefijoDerecho = esPrefijo(a1.getRightChild(), a2.getRightChild());
+        }
+
+        return prefijoIzquierdo && prefijoDerecho;
+    }
+
 
     public static void main(String[] args) {
         BinaryTree<Integer> root = new BinaryTree<>(2);
