@@ -112,6 +112,31 @@ public class ParcialArboles {
         return prefijoIzquierdo && prefijoDerecho;
     }
 
+    public BinaryTree<Par> sumAndDif(BinaryTree<Integer> a){
+        return armarArbol(a, 0,0);
+    }
+
+    private BinaryTree<Par> armarArbol (BinaryTree<Integer> a, int sumaPadre, int valorPadre) {
+        if (a.isEmpty())
+            return null;
+
+        int valorActual = a.getData();
+        int sumaActual = sumaPadre + valorActual;
+        int diferencia = valorActual - valorPadre;
+
+        Par data = new Par(sumaActual, diferencia);
+        BinaryTree<Par> nodo = new BinaryTree<>(data);
+
+        if (a.hasLeftChild())
+            nodo.addLeftChild(armarArbol(a.getLeftChild(),sumaActual,valorActual));
+
+        if (a.hasRightChild())
+            nodo.addRightChild(armarArbol(a.getRightChild(), sumaActual, valorActual));
+
+        return nodo;
+
+    }
+
 
     public static void main(String[] args) {
         BinaryTree<Integer> root = new BinaryTree<>(2);
