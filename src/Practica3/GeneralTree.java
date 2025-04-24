@@ -40,12 +40,6 @@ public class GeneralTree<T>{
 		this.getChildren().add(child);
 	}
 
-	public void addChildren(T... values) {
-		for (T value : values) {
-			this.addChild(new GeneralTree<>(value));
-		}
-	}
-
 	public boolean isLeaf() {
 		return !this.hasChildren();
 	}

@@ -99,18 +99,4 @@ public class RecorridosAG {
         return list;
     }
 
-
-    public static void main(String[] args) {
-        GeneralTree<Integer> a = new GeneralTree<>(1);
-        a.addChildren(2,3,4,5,6);
-
-        a.getChildren().get(0).addChildren(10,34,22,25);
-        a.getChildren().get(1).addChildren(88);
-        a.getChildren().get(4).addChildren(32, 54);
-        a.getChildren().get(4).getChildren().get(1).addChildren(89);
-
-        List<Integer> listImpares = numerosImparesMayoresQuePreOrden(a, 2);
-        System.out.println(listImpares);
-
-    }
 }
