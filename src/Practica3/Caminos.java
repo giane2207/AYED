@@ -13,7 +13,7 @@ public class Caminos {
     public List<Integer> caminoAHojaMasLejana (){
         List<Integer> camino = new ArrayList<>();
         List<Integer> caminoMax = new ArrayList<>();
-        if (!this.arbol.isEmpty()) {
+        if ((this.arbol != null) && (!this.arbol.isEmpty())){
              caminoRecursivo(this.arbol, camino, caminoMax);
         }
         return caminoMax;

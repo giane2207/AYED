@@ -27,13 +27,12 @@ public class Navidad {
             if (child.isLeaf())
                 cantHijosHoja++;
 
-            //hago llamado recursivo
             else if (!esAbeto(child))
                     return false;
         }
 
         // chequeo si tiene al menos 3 hijos hoja
-        return cantHijosHoja >= 3;
+        return (cantHijosHoja >= 3);
     }
 
     public static void main(String[] args) {
@@ -47,10 +46,10 @@ public class Navidad {
         // Nodo 3 y 4 son hojas
         GeneralTree<Integer> nodo3 = new GeneralTree<>(3);
         GeneralTree<Integer> nodo4 = new GeneralTree<>(4);
-        GeneralTree<Integer> nodo8 = new GeneralTree<>(8);
+        //<Integer> nodo8 = new GeneralTree<>(8);
 
         // Nodo raíz (1) tiene como hijos a 2, 3 y 4
-        GeneralTree<Integer> raiz = new GeneralTree<>(1, List.of(nodo2, nodo3, nodo4, nodo8));
+        GeneralTree<Integer> raiz = new GeneralTree<>(1, List.of(nodo2, nodo3, nodo4));
 
         // Instancio la clase y pruebo
         Navidad navidad = new Navidad(raiz);
